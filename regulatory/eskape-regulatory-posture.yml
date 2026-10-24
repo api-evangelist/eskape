@@ -1,0 +1,16 @@
+generated: '2026-10-23'
+method: probed
+source: https://eskape.pro/privacy
+http_status: 200
+fetched: true
+signals:
+  - signal: data_subject_request
+    evidence:
+      quote: "Please send any question or request about your data to management@eskape.pro ."
+      section: "Who we are"
+      note: Provides contact method for data subject requests.
+  - signal: data_retention
+    evidence:
+      quote: "the term of the Free Plan plus five years; unconfirmed registrations: 30 days; detailed statistics: 92 days; password-reset tokens: 60 minutes; IP address is held in memory for about a minute after your last request; a server log entry is created only when a request fails and is kept for up to 30 days"
+      section: "1. In short"
+      note: Describes retention periods for various data categories.

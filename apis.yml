@@ -1,25 +1,57 @@
 aid: eskape
 name: ESKape Sportsbook Feed
-description: 'ESKape Sportsbook Feed is a company surfaced via the API Evangelist harvest backlog (source:
-  new-submission) and added to the network as a stub for full-pipeline profiling.'
+image: https://eskape.pro/brand/og-card.png
+description: ESKape Sportsbook Feed provides a B2B football odds API for licensed betting operators and platforms. It offers RESTful JSON endpoints
+  for pre‑match odds, risk management, and live updates via SignalR on paid plans. The free 90‑day plan includes access to the full pre‑match
+  catalogue, with quota limits and clear error handling. Designed for business‑to‑business integration, it is not for private individuals or consumer
+  betting sites.
 url: https://raw.githubusercontent.com/api-evangelist/eskape/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:new-submission
-x-tier: stub
-x-tier-reason: harvest
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-23 (modular-v1; was harvest)
 specificationVersion: '0.20'
 created: '2026-10-23'
 modified: '2026-10-23'
 tags:
-- Company
-apis: []
+- Sportsbook
+- OddsAPI
+- B2B
+- Football
+- Betting
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: Hosts
+  url: hosts/eskape-hosts.yml
+- type: DomainSecurity
+  url: security/eskape-domain-security.yml
 - type: Website
   url: https://eskape.pro/feed
+- type: DeveloperPortal
+  url: https://eskape.pro
+- type: Documentation
+  url: https://eskape.pro
+- type: APIReference
+  url: https://eskape.pro/openapi/public.json
+- type: TermsOfService
+  url: https://eskape.pro/terms
+- type: PrivacyPolicy
+  url: https://eskape.pro/privacy
+apis:
+- name: ESKape Sportsbook Feed API
+  description: Subscriber API providing football odds, fixtures, pricing, and live updates via SignalR.
+  humanURL: https://eskape.pro
+  baseURL: https://eskape.pro
+  aid: eskape:eskape-sportsbook-feed-api
 x-submission-notes: OpenAPI 3.1.1, 13 ops; developer page; X-Api-Key; free 90-day plan
 x-submitted-by: management@eskape.pro (apis.io/add, 2026-10-23)
+x-enrichment:
+  date: '2026-10-23'
+  status: enriched
+  artifacts_added: 8
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
